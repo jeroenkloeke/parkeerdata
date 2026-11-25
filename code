@@ -1,0 +1,22 @@
+import requests
+import csv
+from datetime import datetime
+
+url = "HIER_KOMT_DE_URL"
+
+response = requests.get(url)
+data = response.json()
+
+# gegevens uitlezen
+vrije_plaatsen = ...
+capaciteit = ...
+
+# meting opslaan
+with open("parkeerdata.csv", "a", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow([
+        datetime.now(),
+        "P+R Nijmegen West",
+        vrije_plaatsen,
+        capaciteit
+    ])
