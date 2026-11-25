@@ -1,4 +1,4 @@
-name: Parkeerdata ieder uur ophalen
+name: Parkeerdata automatisch ophalen
 
 on:
   schedule:
